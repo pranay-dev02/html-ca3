@@ -1,0 +1,219 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, #0d8a3269, #09912006);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+}
+
+.logo {
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.45em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Gold hover effect */
+}
+
+/* Main Background */
+main {
+    background-image: url('./images/wbg2.jpeg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Full viewport height to ensure content fits */
+    padding-top: 80px; /* Push down content below fixed header */
+}
+
+
+/* Services Container Styling */
+#services-container {
+    padding: 60px 20px;
+    text-align: center;
+    color: white; /* Adjust text color for visibility */
+}
+
+.h-primary {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+#services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Service Box Styling */
+.box {
+    background: linear-gradient(to bottom, #3b05146c, #4a030300);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    font-size: 1.254em;
+    text-decoration: overline;
+    text-decoration: solid;
+    color: rgb(248, 249, 249);
+    padding: 20px;
+    margin-top: 350px;
+    height: 390px;
+    width: 490px; /* Increased size */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.box img {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover img {
+    transform: scale(1.1);
+}
+
+/* Content Styling */
+.content {
+    padding: 20px 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.h-secondary {
+    font-size: 1.8em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.box p {
+    font-size: 1em;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Contact Us Page Styling */
+#contact-section {
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background-color: #0d8a3299; /* Match header color */
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    background: linear-gradient(to bottom, #edf1061d, #4a030300);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+}
+
+.contact-form label {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #333;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button {
+    padding: 12px 0;
+    font-size: 1.1em;
+    color: white;
+    background-color: #ffcc00; /* Gold color */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e0b700; /* Darker gold on hover */
+}
+footer {
+    background: linear-gradient(to bottom, #038b2300, #049012a1);
+    font-size: 1.555em;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 380px;
+    margin-bottom: 0px; /* Space above the footer */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1170px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-container {
+        padding: 20px;
+    }
+}

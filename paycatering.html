@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Order</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Header Styling */
+        header {
+            width: 100%;
+            background: linear-gradient(to bottom, #f4a300, #ffd700);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            color: white;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Main Section */
+        main {
+            background-color: #fff;
+            height: 100vh; /* Full viewport height */
+            padding-top: 80px; /* Push down content below fixed header */
+        }
+
+        /* Catering Order Form Styling */
+        .catering-order {
+            background-color: #fff8e1;
+            padding: 40px;
+            margin: 100px auto;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1.h-primary {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .form-group input:focus {
+            border-color: #ffcc00;
+            outline: none;
+        }
+
+        .required {
+            color: red;
+        }
+
+        /* Food Items */
+        .food-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .food-item h3 {
+            font-size: 1.8em;
+            margin-right: 20px;
+            flex: 1;
+        }
+
+        .food-item label {
+            font-size: 1.1em;
+            margin-right: 15px;
+        }
+
+        .food-item input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .food-item input[type="number"] {
+            width: 100px;
+            padding: 5px;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .cost {
+            font-size: 1.2em;
+            color: #f4a300;
+            font-weight: bold;
+        }
+
+        /* Submit Button Styling */
+        button[type="submit"] {
+            background-color: #ffcc00;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #f4a300;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .catering-order {
+                padding: 20px;
+                margin: 50px 20px;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .form-group input {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Bite Bliss</div>
+    </div>
+</header>
+
+<main>
+    <section id="catering-service">
+        <h1 class="h-primary">Food Catering</h1>
+        <div class="catering-order">
+            <h2>Complete Your Catering Order</h2>
+            <form id="catering-form">
+                
+                <!-- Food Items Selection -->
+                <div class="food-item">
+                    <h3>Chicken Tikka</h3>
+                    <div class="meal-options">
+                        <label>
+                            <input type="checkbox" name="meal-type-chickentikka" value="breakfast"> Breakfast
+                        </label>
+                        <label>
+                            <input type="checkbox" name="meal-type-chickentikka" value="lunch"> Lunch
+                        </label>
+                        <label>
+                            <input type="checkbox" name="meal-type-chickentikka" value="dinner"> Dinner
+                        </label>
+                    </div>
+                    <span class="cost">₹100/person</span>
+                </div>
+
+                <div class="food-item">
+                    <h3>Mutton Biryani</h3>
+                    <div class="meal-options">
+                        <label>
+                            <input type="checkbox" name="meal-type-vegbiryani" value="breakfast"> Breakfast
+                        </label>
+                        <label>
+                            <input type="checkbox" name="meal-type-vegbiryani" value="lunch"> Lunch
+                        </label>
+                        <label>
+                            <input type="checkbox" name="meal-type-vegbiryani" value="dinner"> Dinner
+                        </label>
+                    </div>
+                    <span class="cost">₹100/person</span>
+                </div>
+
+                <div class="food-item">
+                    <h3>Gulab Jamun</h3>
+                    <div class="meal-options">
+                        <label>
+                            <input type="checkbox" name="meal-type-gulabjamun" value="breakfast"> Breakfast
+                        </label>
+                        <label>
+                            <input type="checkbox" name="meal-type-gulabjamun" value="lunch"> Lunch
+                        </label>
+                        <label>
+                            <input type="checkbox" name="meal-type-gulabjamun" value="dinner"> Dinner
+                        </label>
+                    </div>
+                    
+                    <span class="cost">₹100/person</span>
+                </div>
+
+                <!-- Event Details -->
+                
+
+                <div class="form-group">
+                    <label for="event-date">Date of Event <span class="required">*</span></label>
+                    <input type="date" id="event-date" name="event-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-time">Event Time <span class="required">*</span></label>
+                    <div class="time-range">
+                        <input type="time" id="event-time-from" name="event-time-from" required>
+                        <span>to</span>
+                        <input type="time" id="event-time-to" name="event-time-to" required>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="venue">Venue <span class="required">*</span></label>
+                    <input type="text" id="venue" name="venue" placeholder="Enter venue name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Location <span class="required">*</span></label>
+                    <input type="text" id="location" name="location" placeholder="Enter location" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact-number">Contact Number <span class="required">*</span></label>
+                    <input type="tel" id="contact-number" name="contact-number" placeholder="Enter your contact number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="host-name">Host's Name <span class="required">*</span></label>
+                    <input type="text" id="host-name" name="host-name" placeholder="Enter host's name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="host-phone">Host's Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="host-phone" name="host-phone" placeholder="Enter host's phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="host-email">Host's Email</label>
+                    <input type="email" id="host-email" name="host-email" placeholder="Enter host's email">
+                </div>
+                <div class="form-group">
+                    <label for="guest-number">No. of Guests <span class="required">*</span></label>
+                    <input type="number" id="guest-number" name="guest-number" placeholder="Approx number of guests if not Known can be cltered 5 hours before the event starts" required>
+                </div>
+
+                <button type="submit">Submit Order</button>
+            </form>
+            
+            <p style="font-style: italic; text-align: center; margin-top: 30px;">
+                We wish you a grand success of the event! <br>
+                You have made the best choice by choosing us! <br>
+                "All will remember the event by the food, so make it unforgettable."
+            </p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

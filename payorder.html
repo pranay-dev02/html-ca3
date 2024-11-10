@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering - Checkout</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            background-color: #0d8a32;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .brand-name {
+            font-size: 2em;
+            color: #fff;
+            margin-left: 20px;
+        }
+
+        /* Main Container */
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Items List */
+        .cart-items {
+            width: 80%;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-name {
+            font-size: 1.2em;
+        }
+
+        .item-price {
+            color: #333;
+        }
+
+        /* Order Summary */
+        .order-summary {
+            width: 80%;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f3f3f3;
+            text-align: right;
+        }
+
+        .order-total {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Payment Button */
+        .pay-now-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #ff5722;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .pay-now-button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header with Brand Name -->
+<header>
+    <div class="brand-name">Bite Bliss</div>
+</header>
+
+<!-- Main Container -->
+<div class="container">
+    <h1>Order Summary</h1>
+
+    <!-- Cart Items -->
+    <div class="cart-items">
+        <!-- Example Item; these will be dynamically generated in the backend -->
+        <div class="item">
+            <div class="item-details">
+                <span class="item-name">ordereditem 1</span>
+                <span class="item-price">₹00</span>
+            </div>
+            <div class="item-quantity">
+                Quantity: 2
+            </div>
+            <div class="item-total-price">
+                ₹00
+            </div>
+        </div>
+        
+        <!-- Add more items dynamically here -->
+    </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+        <div class="order-total">
+            <strong>Total: ₹0</strong>
+        </div>
+    </div>
+
+    <!-- Payment Button -->
+    <button class="pay-now-button" onclick="processPayment()">Proceed to Pay</button>
+</div>
+
+<script>
+    // Placeholder function for payment processing
+    function processPayment() {
+        alert("Redirecting to payment gateway...");
+        // Here, backend integration will be added for payment
+    }
+</script>
+
+</body>
+</html>

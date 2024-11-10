@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Ordering - Bite Bliss</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Header Styling */
+        header {
+            width: 100%;
+            background: linear-gradient(to bottom, #0d8a3269, #09912006);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            color: white;
+        }
+
+        .logo {
+            font-size: 2em;
+            color: #f1a900;
+            font-weight: bolder;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Main Background */
+        main {
+            padding-top: 100px; /* Push down content below fixed header */
+            padding: 40px 20px;
+        }
+
+        /* Bulk Ordering Section */
+        #bulk-ordering {
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .h-primary {
+            font-size: 3em;
+            margin-bottom: 40px;
+            color: #ffcc00;
+        }
+
+        .order-item {
+            background: #f7f7f7;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+            border-left: 8px solid #ffcc00; /* Yellow accent on the left side */
+        }
+
+        .order-item h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .order-details {
+            margin-top: 15px;
+        }
+
+        .order-details p {
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .order-details label {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .order-details input {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        .order-details input:focus {
+            outline: none;
+            border-color: #ffcc00;
+        }
+
+        .checkout-section {
+            margin-top: 30px;
+        }
+
+        #checkout-btn {
+            padding: 15px 30px;
+            font-size: 1.5em;
+            color: white;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #checkout-btn:hover {
+            background-color: #f1a900;
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px; /* Space above the footer */
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">Bite Bliss</div>
+    </div>
+</header>
+
+<main>
+    <section id="bulk-ordering">
+        <h1 class="h-primary">BULK ORDERING</h1>
+        
+        <!-- Bulk Ordering Items -->
+        <div class="order-item">
+            <h2 class="h-secondary">Chicken Biryani</h2>
+            <div class="order-details">
+                <p>Price per serving: ₹300</p>
+                <label for="chicken-biryani">Enter number of people:</label>
+                <input type="number" id="chicken-biryani" name="chicken-biryani" min="10" placeholder="Minimum number of people should be 10" required>
+            </div>
+        </div>
+
+        <div class="order-item">
+            <h2 class="h-secondary">Paneer Butter Masala</h2>
+            <div class="order-details">
+                <p>Price per serving: ₹200</p>
+                <label for="paneer-butter-masala">Enter number of people:</label>
+                <input type="number" id="paneer-butter-masala" name="paneer-butter-masala" min="8" placeholder="Minimum number of people should be 8" required>
+            </div>
+        </div>
+
+        <div class="order-item">
+            <h2 class="h-secondary">Gulab Jamun</h2>
+            <div class="order-details">
+                <p>Price per serving: ₹100</p>
+                <label for="gulab-jamun">Enter number of people:</label>
+                <input type="number" id="gulab-jamun" name="gulab-jamun" min="8" placeholder="Minimum number of people should be 8" required>
+            </div>
+        </div>
+
+        <!-- Add more items as necessary -->
+
+        <!-- Checkout Button -->
+        <div class="checkout-section">
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Bite Bliss. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

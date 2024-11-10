@@ -1,0 +1,201 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+/* Main Background */
+main {
+    background-image: url('./images/wbg2.jpeg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background fixed */
+    padding-top: 80px; /* Push down content below fixed header */
+    min-height: calc(100vh - 80px); /* Ensures main fills the viewport minus header height */
+    overflow-y: auto; /* Ensures only content scrolls */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Header Styling */
+header {
+    width: 100%;
+    background: linear-gradient(to bottom, #0d8a3269, #09912006);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+}
+
+.logo {
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.45em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Gold hover effect */
+}
+
+/* Main Background */
+main {
+    background-image: url('./images/wbg2.jpeg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    padding-top: 80px; /* Push down content below fixed header */
+}
+
+/* Menu Section Styling */
+#menu-section {
+    padding: 60px 20px;
+    text-align: center;
+    color: white; /* Adjust text color for visibility */
+}
+
+.h-primary {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.subtopics {
+    margin: 40px 0; /* Space between subtopics */
+}
+
+/* Food Item Styling */
+.food-item {
+    background: linear-gradient(to bottom, #3b05146c, #4a030300);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    font-size: 1.254em;
+    color: rgb(248, 249, 249);
+    padding: 20px;
+    width: 250px; /* Adjust size as needed */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: inline-block; /* Allow multiple items to sit side by side */
+    text-align: center; /* Center text */
+}
+
+.food-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.food-image {
+    width: 100%; /* Full width of food item box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    margin-top: 10px; /* Space between food name and image */
+}
+
+/* Content Styling */
+.content {
+    padding: 20px 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.h-secondary {
+    font-size: 1.8em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+footer {
+    background: linear-gradient(to bottom, #038b2300, #049012a1);
+    font-size: 1.555em;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: sticky;
+    bottom: 0; /* Keeps it at the bottom of the viewport */
+    width: 100%;
+    margin-top: auto; /* Ensures footer stays at the bottom if content is short */
+}
+/* Styling for Add Button */
+.add-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #ffcc00; /* Gold color */
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #e6b800; /* Darker gold on hover */
+}
+
+/* Styling for Checkout Section */
+.checkout-section {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+}
+
+.checkout-button {
+    background-color: #ffcc00; /* Gold color */
+    color: #333;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+    background-color: #e6b800; /* Darker gold on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1170px) {
+    #services {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .food-item {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
